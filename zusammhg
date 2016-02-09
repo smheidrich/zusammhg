@@ -1,7 +1,7 @@
 #!/bin/bash
 USAGE="zusammhg outfile function1 function2 ... -- command_to_debug"
 
-if (("$#"<5)); then
+if (("$#"<4)); then
   echo "Usage: $USAGE" 1>&2
   exit 1
 fi
@@ -20,7 +20,7 @@ while (("$#")); do
   shift
 done
 
-if (( "${#args[*]}" < 2 )); then
+if (( "${#args[*]}" < 1 )); then
   echo "Usage: $USAGE" 1>&2
   exit 1
 fi

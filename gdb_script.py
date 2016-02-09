@@ -35,10 +35,11 @@ class CallTracer:
         break
       f = f.older()
   def on_exit(self, event):
-    if self.direct_connection_found:
-      gdb.write("Direct connection found.\n")
-    else:
-      gdb.write("No direct connection between functions.\n")
+    if len(self.function_names) >= 2:
+      if self.direct_connection_found:
+        gdb.write("Direct connection found.\n")
+      else:
+        gdb.write("No direct connection between functions.\n")
     self.dg.save(OUTFILE)
 
 class TracerBreakpoint(gdb.Breakpoint):
