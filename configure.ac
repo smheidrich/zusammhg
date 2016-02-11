@@ -6,6 +6,6 @@ AC_CONFIG_FILES([
 ])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_PATH_PROG([PYTHON], [python2.7])
-AX_PYTHON_MODULE([graphviz])
+AX_PYTHON_MODULE([graphviz], [yes])
 AC_PATH_PROG([GDB], [gdb])
 AC_OUTPUT
