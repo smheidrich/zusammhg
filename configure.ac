@@ -4,4 +4,6 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
  Makefile
 ])
+AC_PATH_PROG([PYTHON], [python2.7])
+AC_PATH_PROG([GDB], [gdb])
 AC_OUTPUT
