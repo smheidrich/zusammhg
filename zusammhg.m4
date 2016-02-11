@@ -1,4 +1,4 @@
-#!/bin/bash
+changequote(`{{{', `}}}'){{{#!/bin/bash
 USAGE="zusammhg outfile function1 function2 ... -- command_to_debug"
 
 if (("$#"<4)); then
@@ -35,7 +35,7 @@ if [ -z "$RUN_ARGS" ]; then
 fi
 
 PYTHON_CMD=""\
-'python execfile("gdb_script.py", '\
+'python execfile("}}}datadir{{{/gdb_script.py", '\
 '{ "FUNCTION_NAMES": ['\
 "$FUNCTION_NAMES"\
 '], '\
@@ -44,4 +44,4 @@ PYTHON_CMD=""\
 CMD='gdb -batch -ex '"$PYTHON_CMD"' -ex "run" --args '"$RUN_ARGS"
 echo "$CMD"
 
-gdb -batch -ex "$PYTHON_CMD" -ex "run" --args $RUN_ARGS
+gdb -batch -ex "$PYTHON_CMD" -ex "run" --args $RUN_ARGS}}}
