@@ -35,7 +35,7 @@ if [ -z "$RUN_ARGS" ]; then
 fi
 
 PYTHON_CMD=""\
-'python execfile("}}}datadir{{{/gdb_script.py", '\
+'python exec(open("}}}datadir{{{/gdb_script.py").read(), '\
 '{ "FUNCTION_NAMES": ['\
 "$FUNCTION_NAMES"\
 '], '\
