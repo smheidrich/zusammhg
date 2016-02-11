@@ -6,10 +6,18 @@ stack traces gathered with gdb.
 
 Outputs graph showing relationships as Graphviz (DOT) file.
 
+Building GNU Autotools configuration
+------------------------------------
+
+```
+autoreconf --install
+```
+
 Installation
 ------------
 
 To install, use the usual GNU Autotools procedure:
+
 ```
 ./configure
 make
@@ -23,7 +31,9 @@ Usage
 ```
 zusammhg outfile function1 function2 ... -- command_to_debug
 ```
+
 The resulting graph (``outfile``) can be viewed using any DOT viewer, e.g.
+
 ```
 xdot outfile
 ```
