@@ -9,7 +9,7 @@ Outputs graph showing relationships as Graphviz (DOT) file.
 Building GNU Autotools configuration
 ------------------------------------
 
-```
+``` bash
 autoreconf --install
 ```
 
@@ -18,7 +18,7 @@ Installation
 
 To install, use the usual GNU Autotools procedure:
 
-```
+``` bash
 ./configure
 make
 # Normally as root:
@@ -34,7 +34,7 @@ zusammhg outfile function1 function2 ... -- command_to_debug
 
 The resulting graph (``outfile``) can be viewed using any DOT viewer, e.g.
 
-```
+``` bash
 xdot outfile
 ```
 
