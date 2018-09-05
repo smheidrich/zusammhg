@@ -37,3 +37,8 @@ The resulting graph (``outfile``) can be viewed using any DOT viewer, e.g.
 ```
 xdot outfile
 ```
+
+Similar projects
+----------------
+
+- [Flowgraph-C](https://github.com/akumar101/Flowgraph-C)
